@@ -1,0 +1,58 @@
+﻿[Ll]ibrary/
+[Tt]emp/
+[Oo]bj/
+[Bb]uild/
+[Bb]uilds/
+[Ll]ogs/
+[Mm]emoryCaptures/
+[Aa]ssets/Plugins/Editor/
+
+# Visual Studio/JetBrains Rider project files
+*.csproj
+*.unityproj
+*.sln
+*.suo
+*.tmp
+*.user
+*.userprefs
+*.pidb
+*.booproj
+*.svd
+
+# Unity auto-generated files
+*.pidb.meta
+*.pdb
+*.mdb
+*.opendb
+*.VC.db
+*.pidb
+*.log
+
+# Crashlytics generated files
+crashlytics-build.properties
+
+# Packed Addressable Assets
+/[Aa]ssets/[Aa]ddressable[Aa]ssets[Dd]ata/*/*.bin*
+
+# Ignore asset store tools
+[Aa]ssets/AssetStoreTools*
+
+# Ignore JetBrains IDE specific files
+.idea/
+*.idea/
+*.iml
+
+# Ignore Rider's workspace
+.idea/workspace.xml
+.idea/tasks.xml
+.idea/dictionaries
+.idea/vcs.xml
+.idea/jsLibraryMappings.xml
+.idea/modules.xml
+
+# Ignore Unity generated meta files
+*.meta
+
+# Ignore Unity Package Manager files
+Packages/manifest.json
+Packages/packages-lock.json
