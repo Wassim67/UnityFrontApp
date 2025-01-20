@@ -25,6 +25,7 @@ public class LoginManager : MonoBehaviour
         loginButton?.onClick.AddListener(OnLoginButtonClicked);
         registerButton?.onClick.AddListener(OnRegisterButtonClicked);
     }
+    
 
     private void ValidateReferences()
     {
@@ -104,13 +105,21 @@ public class LoginManager : MonoBehaviour
     private void OnRegisterSuccess(string responseText)
     {
         Debug.Log("Inscription réussie !");
-        info.text = "<color=green>Inscription réussie !</color>";
-        SceneManager.LoadScene("LoginScene");
+        info.text = "<color=green>Inscription réussie ! Connectez-vous !</color>";
+        //SceneManager.LoadScene("LoginScene");
     }
 
     private void OnRegisterError(string error)
     {
         Debug.LogError("Erreur d'inscription : " + error);
-        info.text = "<color=red>Erreur réseau. Veuillez réessayer.</color>";
+        if (error.Contains("409"))
+        {
+            info.text = "<color=red>Identifiant déjà utilisé. Veuillez en choisir un autre.</color>";
+        }
+        else
+        {
+            info.text = "<color=red>Erreur réseau. Veuillez réessayer.</color>";
+        }
     }
+
 }
